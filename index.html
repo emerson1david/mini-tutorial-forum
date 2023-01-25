@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>forum</title>
+        <style>
+            *{margin: 0;
+            padding: 0;
+        box-sizing: border-box;
+    }
+    .container > h2{
+        background-color: #ccc;
+        padding: 10px 0;
+    }
+    .thread{
+        padding: 10px; 
+        border: 1px dashed #ccc;
+    }
+    .respostas{
+        margin: 0 10px;
+    }
+    .respostas p{
+        font-size: 18px;
+        color: #333;
+    }
+    textarea {
+    width:100%
+    height:40px
+    border:1px solid #ccc;
+    }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>forum estudo</h2>
+            <div class="thread">
+                <h2>ainda se deve estudar C?<button>mostrar respostas</button></h2> 
+            <div style="display: nome;" class="respostas">
+               <p>sim se deve estudar tudo!</p>
+               <hr>
+               <p>sim se deve estudar tudo!</p>
+               <hr>
+               <p>sim se deve estudar tudo!</p>
+               <hr>
+               <p>sim se deve estudar tudo!</p>
+               <hr>
+               <form>
+                <textarea></textarea>
+                <input type="submit" name="acao" value="enviar">
+               </form>
+            </div>
+        </div>
+        <script>
+        let buttonsresposta = document.querySelectorall('.thread buttom');
+        for(let i = 0;< buttonsresposta.length; i++){
+           buttonsresposta[i].addeventlistener('click',()=>{
+            let respostas = document.querySelectorAll('.respostas');
+            respostas[i].style.display = "block";
+           }) 
+        }
+        
+        left forms = document.querySelectorAll('form');
+
+        for(let i = 0; i <forms.length; i++){
+           forms[i].addeventlistener('submit',(e)=>{
+               e.preventdefault();
+               let conteudo = document.querySelectorAll('textarea')[i];
+               forms[i].insertadjacenthtml('beforebegin','<p>'+conteudo.value+</)
+                conteudo.value="";
+
+           })
+        }
+        </script>
+    </body>
+</html>
